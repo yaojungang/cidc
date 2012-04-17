@@ -28,21 +28,26 @@ CIDC是我们为了维护自己的服务器配置信息而开发的一套简单�
 = 运行环境安装 =
 CIDC运行环境是php+pdo_mysql+mysql server，你还可以编译安装apc提供opcode缓存支持，以加速运行
 下面是在freebsd上安装运行环境的简单介绍：
-* apache 安装
+
+ * apache 安装
   cd /usr/port/www/apache22
+ 
   make install clean
 
-* php和php扩展安装
+ * php和php扩展安装
  cd /usr/port/lang/php5 
+ 
  make install clean WITHOUT_X11=yes #要选择apache支持
 
-* mysqlserver
+ * mysqlserver
  cd /usr/ports/databases/mysql55-server/
+ 
  make install clean
 
-* pdo-mysql支持
+ * pdo-mysql支持
  cd /usr/ports/databases/php5-pdo_mysql 
+ 
  make install clean
 
-* php.ini修改
+ * php.ini修改
   date.timezone = "Asia/Shanghai"
