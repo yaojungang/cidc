@@ -51,3 +51,6 @@ CIDC运行环境是php+pdo_mysql+mysql server，你还可以编译安装apc提�
 
  * php.ini修改
   date.timezone = "Asia/Shanghai"
+
+ * apache配置
+  apache需要增加支持 .htaccess的功能，CIDC是单入口程序,在public目录下有一个.htaccess文件提供了rewrite规则，如果你使用其他web server，则需要做对应的rewrite规则转换。
